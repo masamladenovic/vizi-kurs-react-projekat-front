@@ -195,6 +195,21 @@
   letter-spacing: 1.2px;
 
   cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.open-menu-button:hover{
+  color: unset;
+
+  border-color: unset;
+
+  background-color: unset;
+
+  box-shadow: unset;
+
+  transform: unset;
+
 }
 
 
@@ -471,6 +486,10 @@
   font-weight: bold;
 }
 
+.main-menu-transparent .open-menu-button:hover {
+  font-weight: bold;
+}
+
 
 .main-menu-transparent .nav-link:hover .icon-wrapper {
   border-color: var(--color-sage);
@@ -603,6 +622,13 @@
 
 .close-side-menu:hover {
   color: var(--color-sage);
+   border-color: unset;
+
+  background-color: unset;
+
+  box-shadow: unset;
+
+  transform: unset;
 }
 
 

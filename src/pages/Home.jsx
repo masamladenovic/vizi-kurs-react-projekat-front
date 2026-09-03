@@ -5,6 +5,7 @@ import MarbleSection from "../components/MarbleSection";
 import Navbar from "../components/navigation/Navbar";
 
 import "./css/Home.css";
+import ImageTextSection from "../components/ImageTextSection";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -40,6 +41,44 @@ const Home = () => {
     },
   ];
 
+const homeSectionsData = [
+  {
+    title: "A HOUSE WITH A QUIET HISTORY",
+    description: "An old Provençal stone house, thoughtfully restored with respect for its history and an appreciation for the simple beauty of modern Mediterranean living.",
+    imageSrc: "../../images/house/the-house/exterior.jpg",
+    imageAlt: "Maison Éloi stone house surrounded by the Provençal landscape",
+    button: { label: "DISCOVER THE HOUSE", to: "/the-house" }
+  },
+  {
+    title: "ROOMS MADE FOR SLOW MORNINGS",
+    description: "LA SUITE BASTIDE · 54 m² · 2 GUESTS. A peaceful room opening onto the gardens, where natural textures, soft light and quiet views invite you to settle into the slower rhythm of Provence.",
+    imageSrc: "../../images/house/the-house/living-room.jpg",
+    imageAlt: "Elegant Provençal living room with natural stone and warm neutral interiors",
+    button: { label: "EXPLORE OUR ROOMS", to: "/rooms" }
+  },
+  {
+    title: "DAYS WITHOUT PLANS, TIME WITHOUT HURRY",
+    description: "Swim before breakfast, read beneath an olive tree, or simply follow the afternoon sun. At Maison Éloi, there is nowhere you need to be and nothing you need to rush.",
+    imageSrc: "../../images/house/the-pool/pool-detail-2.jpg",
+    imageAlt: "Quiet swimming pool surrounded by stone and Mediterranean greenery",
+    button: { label: "THE ART OF DOING LESS", to: "/art-of-doing-less" }
+  },
+  {
+    title: "DINNER UNDER THE PLANE TREES",
+    description: "Long lunches and unhurried dinners inspired by the generous flavours of Provence. Seasonal produce, local ingredients and simple dishes made to be shared beneath the trees.",
+    imageSrc: "../../images/journal/Food&Wine/ratatouille.jpg",
+    imageAlt: "Traditional Provençal ratatouille prepared with fresh seasonal vegetables",
+    button: { label: "DISCOVER DINING", to: "/dining" }
+  },
+  {
+    title: "NOTES FROM A SLOWER SIDE OF PROVENCE",
+    description: "Stories, places and small rituals from around Maison Éloi. Discover the villages of the Luberon, the pleasures of a long lunch and the quiet moments that make a stay linger long after you leave.",
+    imageSrc: "../../images/journal/Stories/afternoon-by-the-pool.jpg",
+    imageAlt: "Quiet afternoon by the pool at Maison Éloi in Provence",
+    button: { label: "READ THE JOURNAL", to: "/journal" }
+  }
+];
+
   return (
     <>
       <Navbar hasHero />
@@ -70,7 +109,7 @@ const Home = () => {
           }}
         />
 
-        {/* Ostale Home sekcije */}
+        <ImageTextSection data={homeSectionsData} />
       </main>
     </>
   );

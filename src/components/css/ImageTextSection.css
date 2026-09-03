@@ -1,0 +1,575 @@
+/* =========================================
+   IMAGE + TEXT SECTION
+   MOBILE FIRST
+========================================= */
+
+.image-text-section {
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: var(--color-linen);
+
+  padding: 4rem 1.2rem 2rem;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   IMAGE + TEXT ROW
+========================================= */
+
+.image-text-div {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-bottom: 6rem;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.image-div {
+  width: 100%;
+  max-width: 700px;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+
+  background-color: var(--color-ivory);
+
+  border: 1px solid var(--color-stone);
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.8s ease;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.image-div:hover {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 10px 25px rgba(36, 37, 34, 0.08);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.image-div img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  padding: 0.5rem;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.text-div {
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.text-div h3 {
+  margin: 0 0 1.5rem;
+
+  color: var(--color-charcoal);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(25px, 8vw, 32px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   PARAGRAPH
+========================================= */
+
+.text-div p {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 0 2rem;
+
+  color: var(--color-sage);
+
+  font-family: var(--font-sans);
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.3px;
+
+  text-align: center;
+}
+
+/* =========================================
+   SCROLL REVEAL
+   MOBILE
+========================================= */
+
+/*
+   Svaki red se animira zasebno.
+
+   Pocetno stanje:
+   IMAGE + TEXT dolaze odozdo.
+*/
+
+.image-text-div .image-div,
+.image-text-div .text-div {
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================
+   MOBILE VISIBLE
+========================================= */
+
+.image-text-div.is-visible .image-div,
+.image-text-div.is-visible .text-div {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE SEQUENCE
+========================================= */
+
+/*
+   Image prvo,
+   text malo kasnije.
+*/
+
+.image-text-div.is-visible .image-div {
+  transition-delay: 0.1s;
+}
+
+
+.image-text-div.is-visible .text-div {
+  transition-delay: 0.35s;
+}
+
+
+/* =========================================
+   TABLET
+   769px+
+========================================= */
+
+@media (min-width: 769px) {
+
+  /* =========================================
+     SECTION
+  ========================================= */
+
+  .image-text-section {
+    padding: 6rem 4rem 4rem;
+  }
+
+
+  /* =========================================
+     ROW
+  ========================================= */
+
+  .image-text-div {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 4rem;
+
+    margin-bottom: 9rem;
+  }
+
+
+  /* =========================================
+     IMAGE
+  ========================================= */
+
+  .image-div {
+    width: 50%;
+
+    max-width: 40rem;
+  }
+
+
+  .image-div img {
+    padding: 0.8rem;
+  }
+
+
+  /* =========================================
+     TEXT
+  ========================================= */
+
+  .text-div {
+    flex: 1;
+
+    max-width: 430px;
+  }
+
+
+  .text-div h3 {
+    font-size: clamp(25px, 3.5vw, 34px);
+
+    letter-spacing: 1.3px;
+  }
+
+
+  .text-div p {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+
+  /* =========================================
+     DESKTOP ASYMMETRY
+  ========================================= */
+
+  /*
+     ODD
+     IMAGE LEFT
+     TEXT RIGHT
+  */
+
+  .image-text-div:nth-child(odd) .image-div {
+    order: 1;
+
+    opacity: 0;
+
+    transform: translateX(-80px);
+  }
+
+
+  .image-text-div:nth-child(odd) .text-div {
+    order: 2;
+
+    opacity: 0;
+
+    transform: translate(80px, -50px);
+  }
+
+
+  /*
+     EVEN
+     TEXT LEFT
+     IMAGE RIGHT
+  */
+
+  .image-text-div:nth-child(even) .text-div {
+    order: 1;
+
+    opacity: 0;
+
+    transform: translate(-80px, 50px);
+  }
+
+
+  .image-text-div:nth-child(even) .image-div {
+    order: 2;
+
+    opacity: 0;
+
+    transform: translateX(80px);
+  }
+
+
+  /* =========================================
+     DESKTOP VISIBLE
+  ========================================= */
+
+  /*
+     ODD
+     IMAGE
+  */
+
+  .image-text-div.is-visible:nth-child(odd) .image-div {
+    opacity: 1;
+
+    transform: translateX(0);
+
+    transition-delay: 0.1s;
+  }
+
+
+  /*
+     ODD
+     TEXT
+  */
+
+  .image-text-div.is-visible:nth-child(odd) .text-div {
+    opacity: 1;
+
+    transform: translate(0, -50px);
+
+    transition-delay: 0.35s;
+  }
+
+
+  /*
+     EVEN
+     TEXT
+  */
+
+  .image-text-div.is-visible:nth-child(even) .text-div {
+    opacity: 1;
+
+    transform: translate(0, 50px);
+
+    transition-delay: 0.1s;
+  }
+
+
+  /*
+     EVEN
+     IMAGE
+  */
+
+  .image-text-div.is-visible:nth-child(even) .image-div {
+    opacity: 1;
+
+    transform: translateX(0);
+
+    transition-delay: 0.35s;
+  }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+   1200px+
+========================================= */
+
+@media (min-width: 1200px) {
+
+  .image-text-section {
+    padding: 8rem 7rem 5rem;
+  }
+
+
+  .image-text-div {
+    gap: 6rem;
+
+    margin-bottom: 11rem;
+  }
+
+
+  .image-div {
+    width: 42rem;
+
+    max-width: 48%;
+  }
+
+
+  .text-div {
+    max-width: 550px;
+  }
+
+
+  .text-div h3 {
+    font-size: clamp(28px, 3vw, 38px);
+
+    line-height: 1.05;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .text-div p {
+    max-width: 500px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+  }
+
+}
+
+
+/* =========================================
+   EXTRA LARGE DESKTOP
+   1500px+
+========================================= */
+
+@media (min-width: 1500px) {
+
+  .image-text-section {
+    padding-left: 12rem;
+
+    padding-right: 12rem;
+  }
+
+
+  .image-text-div {
+    gap: 8rem;
+
+    margin-bottom: 13rem;
+  }
+
+
+  .image-div {
+    width: 43rem;
+
+    max-width: 46%;
+  }
+
+
+  .text-div {
+    max-width: 580px;
+  }
+
+
+  /* =========================================
+     STRONGER EDITORIAL OFFSET
+  ========================================= */
+
+  .image-text-div:nth-child(odd) .text-div {
+    transform: translate(80px, -85px);
+  }
+
+
+  .image-text-div:nth-child(even) .text-div {
+    transform: translate(-80px, 85px);
+  }
+
+
+  /* =========================================
+     VISIBLE
+  ========================================= */
+
+  .image-text-div.is-visible:nth-child(odd) .text-div {
+    transform: translate(0, -85px);
+  }
+
+
+  .image-text-div.is-visible:nth-child(even) .text-div {
+    transform: translate(0, 85px);
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   480px-
+========================================= */
+
+@media (max-width: 480px) {
+
+  .image-text-section {
+    padding: 4rem 1.2rem 2rem;
+  }
+
+
+  .image-text-div {
+    gap: 2rem;
+
+    margin-bottom: 6rem;
+  }
+
+
+  .image-div img {
+    padding: 0.5rem;
+  }
+
+
+  .text-div h3 {
+    font-size: 25px;
+
+    letter-spacing: 1px;
+  }
+
+
+  .text-div p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .text-div button {
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .image-text-div .image-div,
+  .image-text-div .text-div {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+
+
+  .image-div:hover {
+    transform: none;
+
+    box-shadow: none;
+  }
+}
