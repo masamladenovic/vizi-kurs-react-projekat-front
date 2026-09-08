@@ -9,9 +9,9 @@ import RoomAmenities from "../components/RoomAmenities";
 
 import { rooms } from "../data/rooms";
 
-const RoomDetail = () => {
-  const navigate = useNavigate();
+const RoomPage = () => {
   const { roomSlug } = useParams();
+  const navigate = useNavigate();
 
   const room = rooms[roomSlug];
 
@@ -23,7 +23,10 @@ const RoomDetail = () => {
     <>
       <Navbar />
 
-      <RoomPhotoGallery images={room.gallery} />
+      <RoomPhotoGallery
+        images={room.gallery}
+        title={room.title}
+      />
 
       <MarbleSection
         subtitle={room.subtitle}
@@ -51,4 +54,4 @@ const RoomDetail = () => {
   );
 };
 
-export default RoomDetail;
+export default RoomPage;

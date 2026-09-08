@@ -1,0 +1,157 @@
+.room-details {
+  background-color: var(--color-ivory);
+  padding: 80px 20px;
+}
+
+.room-details__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.room-details__intro {
+  max-width: 600px;
+  margin-bottom: 50px;
+}
+
+.room-details__eyebrow {
+  display: block;
+  margin-bottom: 16px;
+
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--color-sage);
+}
+
+.room-details__title {
+  margin: 0 0 18px;
+
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: var(--color-charcoal);
+}
+
+.room-details__description {
+  max-width: 500px;
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  color: var(--color-charcoal);
+  opacity: 0.7;
+}
+
+/* =========================
+   DETAILS GRID
+========================= */
+
+.room-details__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.room-details__item {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  padding: 22px 0;
+
+  border-top: 1px solid rgba(36, 37, 34, 0.18);
+}
+
+.room-details__item:last-child {
+  border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+}
+
+.room-details__label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--color-sage);
+}
+
+.room-details__value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  color: var(--color-charcoal);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 600px) {
+  .room-details {
+    padding: 100px 40px;
+  }
+
+  .room-details__grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+  }
+
+  .room-details__item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+  }
+
+  .room-details__item:last-child {
+    border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 900px) {
+  .room-details {
+    padding: 130px 60px;
+  }
+
+  .room-details__intro {
+    margin-bottom: 70px;
+  }
+
+  .room-details__title {
+    font-size: 3rem;
+  }
+
+  .room-details__grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+  }
+
+  .room-details__item {
+    min-height: 110px;
+    padding: 25px 0;
+  }
+
+  .room-details__item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .room-details__item:nth-child(4),
+  .room-details__item:nth-child(5),
+  .room-details__item:nth-child(6) {
+    border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+  }
+}

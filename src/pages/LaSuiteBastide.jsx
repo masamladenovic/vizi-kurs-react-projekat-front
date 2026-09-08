@@ -1,9 +1,8 @@
-import "./css/LaSuiteBastide.css"
+import RoomPage from "../components/RoomPage";
+import { rooms } from "../data/rooms";
 
 const LaSuiteBastide = () => {
-  return (
-    <div>LaSuiteBastide</div>
-  )
-}
+  return <RoomPage room={rooms["la-suite-bastide"]} />;
+};
 
-export default LaSuiteBastide 
+export default LaSuiteBastide;

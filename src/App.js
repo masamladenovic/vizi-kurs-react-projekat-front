@@ -10,11 +10,6 @@ import Dining from "./pages/Dining"
 import ThePhilosophy from "./pages/ThePhilosophy"
 import Rooms from "./pages/Rooms"
 import AllRooms from "./pages/AllRooms"
-import LaSuiteBastide from "./pages/LaSuiteBastide"
-import ChambreOliviers from "./pages/ChambreOliviers"
-import ChambreJardin from "./pages/ChambreJardin"
-import ChambreLuberon from "./pages/ChambreLuberon"
-import RoomDetail from "./pages/RoomDetail"
 import Journal from "./pages/Journal"
 import Stories from "./pages/Stories"
 import Provence from "./pages/Provence"
@@ -30,6 +25,9 @@ import Login from "./pages/Login"
 import NotFound from "./pages/NotFound"
 import "./App.css";
 
+// Umesto direktnog uvoza komponente RoomDetails, uvozimo stranicu RoomPage koja upravlja podacima sobe:
+import RoomPage from "./components/RoomPage"; 
+
 function App() {
   return (
     <BrowserRouter>
@@ -43,11 +41,10 @@ function App() {
         <Route path="/the-philosophy" element={<ThePhilosophy />} />
         <Route path="/rooms" element={<Rooms />} />
         <Route path="/all-rooms" element={<AllRooms />} />
-        <Route path="/la-suite-bastide" element={<LaSuiteBastide />} />
-        <Route path="/chambre-oliviers" element={<ChambreOliviers />} />
-        <Route path="/chambre-jardin" element={<ChambreJardin />} />
-        <Route path="/chambre-luberon" element={<ChambreLuberon />} />
-        <Route path="/room-detail" element={<RoomDetail />} />
+        
+        {/* Ovde je izmenjeno da ruta vodi na RoomPage */}
+        <Route path="/rooms/:roomSlug" element={<RoomPage />} />
+
         <Route path="/journal" element={<Journal />} />
         <Route path="/stories" element={<Stories />} />
         <Route path="/provence" element={<Provence />} />

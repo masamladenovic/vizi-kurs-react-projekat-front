@@ -1,0 +1,178 @@
+.room-amenities {
+  background-color: var(--color-linen);
+  padding: 80px 20px;
+}
+
+.room-amenities__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.room-amenities__header {
+  margin-bottom: 50px;
+}
+
+.room-amenities__eyebrow {
+  display: block;
+  margin-bottom: 18px;
+
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--color-sage);
+}
+
+.room-amenities__title {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: var(--color-charcoal);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.room-amenities__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-amenities__intro {
+  max-width: 500px;
+  margin-bottom: 45px;
+}
+
+.room-amenities__intro p {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  color: var(--color-charcoal);
+  opacity: 0.75;
+}
+
+/* =========================
+   AMENITIES LIST
+========================= */
+
+.room-amenities__list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.room-amenities__item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 18px 0;
+
+  border-top: 1px solid rgba(36, 37, 34, 0.18);
+}
+
+.room-amenities__item:last-child {
+  border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+}
+
+.room-amenities__number {
+  min-width: 25px;
+
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+
+  color: var(--color-sage);
+}
+
+.room-amenities__name {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: var(--color-charcoal);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 600px) {
+  .room-amenities {
+    padding: 100px 40px;
+  }
+
+  .room-amenities__title {
+    font-size: 3rem;
+  }
+
+  .room-amenities__list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+  }
+
+  .room-amenities__item:last-child {
+    border-bottom: none;
+  }
+
+  .room-amenities__item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 900px) {
+  .room-amenities {
+    padding: 130px 60px;
+  }
+
+  .room-amenities__header {
+    margin-bottom: 80px;
+  }
+
+  .room-amenities__title {
+    font-size: 3.5rem;
+  }
+
+  .room-amenities__content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 100px;
+    align-items: start;
+  }
+
+  .room-amenities__intro {
+    margin: 0;
+    padding-top: 5px;
+  }
+
+  .room-amenities__list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+  }
+
+  .room-amenities__item {
+    padding: 22px 0;
+  }
+
+  .room-amenities__item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+  }
+}

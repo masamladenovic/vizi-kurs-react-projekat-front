@@ -1,9 +1,8 @@
-import "./css/ChambreOliviers.css"
+import RoomPage from "../components/RoomPage";
+import { rooms } from "../data/rooms";
 
 const ChambreOliviers = () => {
-  return (
-    <div>ChambreOliviers</div>
-  )
-}
+  return <RoomPage room={rooms["chambre-oliviers"]} />;
+};
 
-export default ChambreOliviers  
+export default ChambreOliviers;

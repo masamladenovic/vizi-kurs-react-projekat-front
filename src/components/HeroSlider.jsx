@@ -37,6 +37,10 @@ const HeroSlider = ({
                 alt={image.alt}
                 className="hero-image"
               />
+
+              {image.text && (
+                <div className="hero-slide-text">{image.text}</div>
+              )}
             </div>
           </SwiperSlide>
         ))}

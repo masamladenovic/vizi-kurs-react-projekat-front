@@ -1,0 +1,593 @@
+/* =========================================
+   ROOM PHOTO GALLERY
+   MOBILE FIRST
+========================================= */
+
+.room-photo-gallery {
+  width: 100%;
+
+  padding: 5rem 1rem;
+
+  background-color: var(--color-linen);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.room-photo-gallery-header {
+  width: 100%;
+  max-width: 680px;
+
+  margin: 0 auto 2.5rem;
+
+  text-align: center;
+}
+
+
+.room-photo-gallery-subtitle {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: var(--color-sage);
+
+  font-family: var(--font-sans);
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  letter-spacing: 2.8px;
+
+  text-transform: uppercase;
+}
+
+
+.room-photo-gallery-header h2 {
+  margin: 0 0 1rem;
+
+  color: var(--color-charcoal);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(34px, 9vw, 52px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: 0.5px;
+}
+
+
+.room-photo-gallery-header p {
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  color: var(--color-sage);
+
+  font-family: var(--font-sans);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   GALLERY CONTAINER
+========================================= */
+
+.room-photo-gallery-container {
+  width: 100%;
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   MAIN GALLERY
+========================================= */
+
+.room-photo-gallery-main {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/*
+  IMPORTANT:
+  Give the Swiper an explicit height.
+  Do NOT use height:auto here.
+*/
+
+.room-gallery-main-swiper {
+  width: 100%;
+
+  height: 65vw;
+
+  max-height: 520px;
+
+  min-height: 260px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN SLIDES
+========================================= */
+
+.room-gallery-main-swiper .swiper-slide {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   IMAGE WRAPPER
+========================================= */
+
+.room-gallery-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-stone);
+
+  background-color: var(--color-stone);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN IMAGE
+========================================= */
+
+.room-gallery-image-wrapper img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transform: scale(1.001);
+
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.room-gallery-main-swiper
+.swiper-slide:hover
+.room-gallery-image-wrapper img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================
+   IMAGE COUNTER
+========================================= */
+
+.room-gallery-image-number {
+  position: absolute;
+
+  right: 1rem;
+  bottom: 1rem;
+
+  z-index: 5;
+
+  padding: 0.45rem 0.65rem;
+
+  color: var(--color-white);
+
+  background: rgba(36, 37, 34, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(8px);
+
+  font-family: var(--font-sans);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.room-gallery-main-swiper .swiper-button-prev,
+.room-gallery-main-swiper .swiper-button-next {
+  width: 36px;
+  height: 36px;
+
+  margin-top: -18px;
+
+  color: var(--color-white);
+
+  background: rgba(36, 37, 34, 0.28);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.room-gallery-main-swiper .swiper-button-prev::after,
+.room-gallery-main-swiper .swiper-button-next::after {
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+.room-gallery-main-swiper .swiper-button-prev {
+  left: 10px;
+}
+
+
+.room-gallery-main-swiper .swiper-button-next {
+  right: 10px;
+}
+
+
+.room-gallery-main-swiper .swiper-button-prev:hover,
+.room-gallery-main-swiper .swiper-button-next:hover {
+  background: rgba(36, 37, 34, 0.55);
+}
+
+
+/* =========================================
+   THUMBNAILS
+========================================= */
+
+.room-photo-gallery-thumbs {
+  width: 100%;
+
+  margin-top: 10px;
+}
+
+
+.room-gallery-thumbs-swiper {
+  width: 100%;
+
+  height: auto;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   THUMB SLIDES
+========================================= */
+
+.room-gallery-thumbs-swiper .swiper-slide {
+  width: 25%;
+
+  height: auto;
+
+  opacity: 0.45;
+
+  cursor: pointer;
+
+  transition: opacity 0.4s ease;
+}
+
+
+.room-gallery-thumbs-swiper
+.swiper-slide:hover {
+  opacity: 0.8;
+}
+
+
+.room-gallery-thumbs-swiper
+.swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+
+/* =========================================
+   THUMB
+========================================= */
+
+.room-gallery-thumb {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  border: 1px solid transparent;
+
+  box-sizing: border-box;
+
+  transition: border-color 0.4s ease;
+}
+
+
+.room-gallery-thumbs-swiper
+.swiper-slide-thumb-active
+.room-gallery-thumb {
+  border-color: var(--color-charcoal);
+}
+
+
+.room-gallery-thumb img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+
+.room-gallery-thumbs-swiper
+.swiper-slide:hover
+.room-gallery-thumb img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+.room-photo-gallery-header,
+.room-photo-gallery-container {
+  opacity: 0;
+
+  transform: translateY(40px);
+}
+
+
+.room-photo-gallery.is-visible
+.room-photo-gallery-header {
+  animation:
+    galleryFadeUp 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.05s
+    forwards;
+}
+
+
+.room-photo-gallery.is-visible
+.room-photo-gallery-container {
+  animation:
+    galleryFadeUp 1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.2s
+    forwards;
+}
+
+
+@keyframes galleryFadeUp {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 600px) {
+
+  .room-photo-gallery {
+    padding: 6.5rem 2.5rem;
+  }
+
+
+  .room-photo-gallery-header {
+    margin-bottom: 3.5rem;
+  }
+
+
+  .room-photo-gallery-header p {
+    font-size: 14px;
+  }
+
+
+  .room-gallery-main-swiper {
+    height: min(58vw, 500px);
+
+    min-height: 350px;
+  }
+
+
+  .room-gallery-main-swiper .swiper-button-prev,
+  .room-gallery-main-swiper .swiper-button-next {
+    width: 42px;
+    height: 42px;
+
+    margin-top: -21px;
+  }
+
+
+  .room-gallery-main-swiper .swiper-button-prev::after,
+  .room-gallery-main-swiper .swiper-button-next::after {
+    font-size: 13px;
+  }
+
+
+  .room-gallery-main-swiper .swiper-button-prev {
+    left: 16px;
+  }
+
+
+  .room-gallery-main-swiper .swiper-button-next {
+    right: 16px;
+  }
+
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 900px) {
+
+  .room-photo-gallery {
+    padding: 8rem 4rem;
+  }
+
+
+  .room-photo-gallery-header {
+    margin-bottom: 4rem;
+  }
+
+
+  .room-photo-gallery-header h2 {
+    font-size: clamp(42px, 4vw, 58px);
+  }
+
+
+  .room-photo-gallery-container {
+    max-width: 1050px;
+  }
+
+
+  .room-gallery-main-swiper {
+    height: min(50vw, 560px);
+
+    min-height: 420px;
+  }
+
+
+  .room-gallery-main-swiper .swiper-button-prev,
+  .room-gallery-main-swiper .swiper-button-next {
+    width: 46px;
+    height: 46px;
+
+    margin-top: -23px;
+  }
+
+
+  .room-gallery-main-swiper .swiper-button-prev {
+    left: 20px;
+  }
+
+
+  .room-gallery-main-swiper .swiper-button-next {
+    right: 20px;
+  }
+
+
+  .room-photo-gallery-thumbs {
+    margin-top: 14px;
+  }
+
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1200px) {
+
+  .room-photo-gallery {
+    padding: 9rem 6rem;
+  }
+
+
+  .room-photo-gallery-container {
+    max-width: 1100px;
+  }
+
+
+  .room-gallery-main-swiper {
+    height: 560px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .room-photo-gallery-header,
+  .room-photo-gallery-container {
+    opacity: 1;
+
+    transform: none;
+
+    animation: none !important;
+  }
+
+
+  .room-gallery-image-wrapper img,
+  .room-gallery-thumb img,
+  .room-gallery-thumbs-swiper .swiper-slide,
+  .room-gallery-main-swiper .swiper-button-prev,
+  .room-gallery-main-swiper .swiper-button-next {
+    transition: none;
+  }
+
+
+  .room-gallery-main-swiper
+  .swiper-slide:hover
+  .room-gallery-image-wrapper img {
+    transform: none;
+  }
+
+}

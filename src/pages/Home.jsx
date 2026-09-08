@@ -110,6 +110,7 @@ const homeSectionsData = [
         />
 
         <ImageTextSection data={homeSectionsData} />
+
       </main>
     </>
   );
