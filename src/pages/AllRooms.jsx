@@ -9,6 +9,7 @@ import "swiper/css/effect-fade";
 
 import "./css/AllRooms.css";
 import Navbar from "../components/navigation/Navbar";
+import Footer from "../components/navigation/Footer";
 
 const AllRooms = () => {
   const navigate = useNavigate();
