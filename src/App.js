@@ -39,8 +39,7 @@ function App() {
         <Route path="/pool" element={<Pool />} />
         <Route path="/dining" element={<Dining />} />
         <Route path="/the-philosophy" element={<ThePhilosophy />} />
-        <Route path="/rooms" element={<Rooms />} />
-        <Route path="/all-rooms" element={<AllRooms />} />
+        <Route path="/rooms" element={<AllRooms />} />
         
         {/* Ovde je izmenjeno da ruta vodi na RoomPage */}
         <Route path="/rooms/:roomSlug" element={<RoomPage />} />
