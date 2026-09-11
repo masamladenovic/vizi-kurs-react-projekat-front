@@ -1,0 +1,112 @@
+/* =========================================================
+   BOOK NOW SECTION (Glavni kontejner)
+========================================================= */
+
+.book-now {
+  position: relative;
+  width: 100%;
+  background-color:  var(--color-stone) /* Topla bež/zlatna nijansa sa slike */
+}
+
+/* =========================================================
+   GORNJA TRAKA: "BOOK YOUR STAY" + STRELICA
+========================================================= */
+
+.book-your-stay-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 20px;
+  background-color: var(--color-stone); /* Možeš blago korigovati ton po želji */
+}
+
+.book-your-stay-div a {
+  font-family: "Manrope", sans-serif; 
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 3px; 
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.book-your-stay-div a:hover {
+  opacity: 0.8;
+}
+
+/* Kružna strelica pozicionirana u gornji desni ugao */
+.book-now .arrow-circle {
+  position: absolute;
+  right: 40px;
+  top: -3%;
+  transform: translateY(-50%);
+  background-color: var(--color-stone);
+  
+  width: 85px;
+  height: 85px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: #ffffff;
+  font-size: 38px;
+  transition: all 0.3s ease;
+}
+
+.book-now .arrow-circle:hover {
+  background-color: #ffffff;
+  color: var(--color-stone);
+  border-color: #ffffff;
+}
+
+/* =========================================================
+   DONJI DEO: SLIKA, OVERLAY I OGROMAN LOGO
+========================================================= */
+
+.book-now-image {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  overflow: hidden;
+}
+
+/* Slika pozadine */
+.book-now-image img:not(.book-now-logo-img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Zatamnjivač (Overlay) preko slike da se logo i tekst istaknu */
+.book-now-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35); /* Podesi providnost po želji (0.3 do 0.5) */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ogroman logo u centru slike */
+.book-now-logo-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 480px; 
+  height: auto;
+  
+  z-index: 2; /* Mora biti iznad overlay-a */
+  filter: brightness(0) invert(1); /* Pretvara logo u belu boju ukoliko je crni png/svg, obriši ako ti je već beo */
+  pointer-events: none;
+}
