@@ -1,0 +1,283 @@
+/* =========================================================
+   JOURNAL CATEGORY PAGE
+========================================================= */
+
+.journal-category-page {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 100px;
+
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.journal-category-intro {
+  padding: 125px 20px 80px;
+
+  background-color: var(--color-ivory);
+}
+
+.journal-category-intro__container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.journal-category-intro__eyebrow {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+
+  color: var(--color-sage);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.journal-category-intro h1 {
+  margin: 0;
+
+  max-width: 850px;
+
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 92px);
+  font-weight: 400;
+
+  line-height: 0.98;
+  letter-spacing: -2px;
+
+  color: var(--color-charcoal);
+}
+
+/* =========================================================
+   INTRO TEXT
+========================================================= */
+
+.journal-category-intro p {
+  max-width: 570px;
+
+  margin: 30px auto 0;
+
+  font-family: var(--font-sans);
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: var(--color-sage);
+}
+
+/* =========================================================
+   END SECTION
+========================================================= */
+
+.journal-category-end {
+  padding: 100px 20px 120px;
+
+  background-color: var(--color-linen);
+}
+
+.journal-category-end__container {
+  width: 100%;
+  max-width: var(--container);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* =========================================================
+   END EYEBROW
+========================================================= */
+
+.journal-category-end__eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: var(--color-sage);
+}
+
+/* =========================================================
+   END TITLE
+========================================================= */
+
+.journal-category-end h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(46px, 7vw, 78px);
+  font-weight: 400;
+
+  line-height: 0.98;
+  letter-spacing: -1.8px;
+
+  color: var(--color-charcoal);
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.journal-category-end__button {
+  width: auto;
+  max-width: none;
+
+  margin-top: 38px;
+  padding: 0 0 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-bottom: 1px solid var(--color-charcoal);
+  border-radius: 0;
+
+  background: transparent;
+
+  color: var(--color-charcoal);
+
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+
+  box-shadow: none;
+  backdrop-filter: none;
+
+  transition:
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.journal-category-end__button:hover {
+  transform: none;
+
+  background: transparent;
+
+  color: var(--color-sage);
+
+  border-color: var(--color-sage);
+
+  box-shadow: none;
+}
+
+.journal-category-end__button span {
+  margin-left: 25px;
+
+  font-size: 16px;
+
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.journal-category-end__button:hover span {
+  transform: translateX(6px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) {
+  .journal-category-intro {
+    padding: 160px 32px 110px;
+  }
+
+  .journal-category-intro p {
+    font-size: 15px;
+  }
+
+  .journal-category-end {
+    padding: 140px 32px 160px;
+  }
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1100px) {
+  .journal-category-intro {
+    padding: 190px 40px 130px;
+  }
+
+  .journal-category-end {
+    padding: 160px 40px 190px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .journal-category-intro {
+    padding: 105px 16px 70px;
+  }
+
+  .journal-category-intro h1 {
+    font-size: 46px;
+    letter-spacing: -1.3px;
+  }
+
+  .journal-category-intro p {
+    margin-top: 24px;
+
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .journal-category-end {
+    padding: 85px 16px 100px;
+  }
+
+  .journal-category-end h2 {
+    font-size: 43px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .journal-category-end__button,
+  .journal-category-end__button span {
+    transition: none;
+  }
+}
