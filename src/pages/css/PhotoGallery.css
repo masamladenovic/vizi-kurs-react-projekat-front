@@ -1,0 +1,404 @@
+/* =========================================================
+   PHOTO GALLERY
+   MOBILE FIRST
+========================================================= */
+
+.photo-gallery {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 80px 50px;
+  margin-top: 150px;
+}
+
+/* =========================================================
+   CATEGORIES (Popravljeno da se prva i poslednja vide u redu)
+========================================================= */
+
+.photo-gallery__categories {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto 35px;
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrirano kad ima mesta */
+
+  /* KLJUČNO: Sprečava da poslednja kategorija padne u novi red */
+  flex-wrap: nowrap;
+
+  gap: 85px;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.photo-gallery__categories::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ako je ekran nešto uži a ima 4 stavke, automatski ih poravnaj levo da prva i poslednja ne kliznu van ekrana */
+@media (max-width: 1100px) {
+  .photo-gallery__categories {
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.photo-gallery__category {
+  position: relative;
+  flex: 0 0 auto;
+
+  padding: 0 0 8px;
+  margin: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+  color: #888;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.photo-gallery__category::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #b39a68;
+  transition: width 0.3s ease;
+}
+
+.photo-gallery__category:hover {
+  color: #222;
+  box-shadow: unset;
+}
+
+.photo-gallery__category--active {
+  color: #111;
+}
+
+.photo-gallery__category--active::after {
+  width: 100%;
+}
+
+/* =========================================================
+   GALLERY CONTAINER (Veće slike i manji razmak)
+========================================================= */
+
+.photo-gallery__grid {
+  width: calc(100% - 20px);
+  max-width: 1600px; 
+  margin: 0 auto;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  /* 4 kolone na desktopu, 2 na mobilnom */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  /* Minimalni razmaci da slike budu veće */
+  column-gap: 0px;
+  row-gap: 0px;
+
+  align-items: start;
+}
+
+/* =========================================================
+   GALLERY ITEM
+========================================================= */
+
+.photo-gallery__item {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.photo-gallery__item img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  vertical-align: middle;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+}
+
+/* =========================================================
+   HOVER OVERLAY & ZOOM (Netaknuto)
+========================================================= */
+
+.photo-gallery__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    background 0.35s ease;
+}
+
+.photo-gallery__zoom {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.75);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.photo-gallery__zoom svg {
+  width: 21px;
+  height: 21px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .photo-gallery__item:hover img {
+    transform: scale(1.025);
+    filter: brightness(0.58) blur(1.2px);
+  }
+
+  .photo-gallery__item:hover .photo-gallery__overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .photo-gallery__item:hover .photo-gallery__zoom {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   TABLET & DESKTOP RESPONSIVE
+========================================================= */
+
+@media (min-width: 700px) {
+  .photo-gallery__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 6px;
+    row-gap: 6px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .photo-gallery__grid {
+    width: calc(100% - 40px);
+    max-width: 1550px;
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+}
+
+/* =========================================================
+   LIGHTBOX (POTPUNO NETAKNUTO)
+========================================================= */
+
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 50px;
+  background: rgba(12, 12, 12, 0.95);
+  animation: photoLightboxFadeIn 0.3s ease;
+}
+
+.photo-lightbox__image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.photo-lightbox__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  user-select: none;
+  animation: photoImageZoomIn 0.35s ease;
+}
+
+.photo-lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.photo-lightbox__close svg {
+  width: 27px;
+  height: 27px;
+}
+
+.photo-lightbox__close:hover {
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.photo-lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 58px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.photo-lightbox__arrow svg {
+  width: 34px;
+  height: 34px;
+}
+
+.photo-lightbox__arrow:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.photo-lightbox__arrow--left {
+  left: 10px;
+}
+
+.photo-lightbox__arrow--right {
+  right: 10px;
+} 
+
+
+.photo-lightbox__counter {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+@keyframes photoLightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes photoImageZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.photo-lightbox__arrow {
+    transform: translateY(-50%) !important;
+}
+
+.photo-lightbox__arrow:hover {
+    transform: translateY(-50%) !important;
+}
+
+.photo-lightbox__arrow:focus,
+.photo-lightbox__arrow:active {
+    transform: translateY(-50%) !important;
+}
+
+.photo-lightbox__arrow svg {
+    transform: none !important;
+}
+
+.photo-lightbox__arrow:hover svg {
+    transform: none !important;
+}

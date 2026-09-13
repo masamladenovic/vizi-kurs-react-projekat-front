@@ -28,6 +28,7 @@ import "./App.css";
 // Umesto direktnog uvoza komponente RoomDetails, uvozimo stranicu RoomPage koja upravlja podacima sobe:
 import RoomPage from "./components/RoomPage"; 
 import BookNow from "./components/BookNow";
+import PhotoGallery from "./pages/PhotoGallery";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
         <Route path="/guests" element={<Guests />} />
         <Route path="/stay-summary" element={<StaySummary />} />
         <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/photo-gallery" element={<PhotoGallery />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
