@@ -1,0 +1,645 @@
+/* =========================================================
+   LOGIN SECTION
+========================================================= */
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.52) 0%,
+      rgba(0, 0, 0, 0.26) 25%,
+      rgba(0, 0, 0, 0.2) 55%,
+      rgba(0, 0, 0, 0.42) 100%
+    ),
+    url("/public/images/house/the-pool/evening-pool.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* =========================================================
+   LOGIN / REGISTER CARD
+========================================================= */
+
+.register-form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 400px;
+  min-height: 380px;
+
+  margin-top: 200px;
+  padding: 30px 40px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.247);
+
+  border-radius: 15px;
+  border: 0.5px solid rgba(255, 255, 255, 0.24);
+
+  backdrop-filter: blur(5px);
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.register-form {
+  width: 100%;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.register-title {
+  color: white;
+
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  margin: 0 0 50px;
+}
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.register-form-group {
+  width: 100%;
+}
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.register-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.register-form-control {
+  display: block;
+
+  width: 100%;
+  height: 40px;
+
+  box-sizing: border-box;
+
+  padding: 0 20px;
+
+  text-align: left;
+
+  background-color: rgba(255, 255, 255, 0.046);
+
+  border-radius: 30px;
+  border: 0.5px solid rgba(255, 255, 255, 0.24);
+
+  backdrop-filter: blur(5px);
+
+  margin: 0 0 30px;
+
+  font-family: var(--font-sans);
+  font-size: 1rem;
+
+  color: white;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.register-form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.register-form-control:focus {
+  border-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 400px;
+
+  height: 40px;
+
+  border-radius: 30px;
+  border: none;
+
+  background-color: var(--color-sage);
+  color: white;
+
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  margin-bottom: 15px;
+
+  transition: 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: var(--color-charcoal);
+  color: white;
+}
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.quick-login-links {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  margin: 0 0 15px;
+
+  position: relative;
+}
+
+.quick-login-links a {
+  color: white;
+
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.quick-login-links a:hover {
+  font-weight: 600;
+}
+
+.quick-login-links::after {
+  position: absolute;
+
+  content: "";
+
+  left: 0;
+  bottom: -20px;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.203);
+}
+
+/* =========================================================
+   OR LOGIN WITH
+========================================================= */
+
+.or-login-with {
+  width: 100%;
+  text-align: center;
+}
+
+.or-login-with p {
+  color: white;
+
+  font-family: var(--font-sans);
+  font-size: 14px;
+
+  margin: 50px 0 15px;
+}
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.login-icons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 28px;
+}
+
+.login-icons svg {
+  font-size: 36px;
+
+  color: var(--color-charcoal);
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.login-icons svg:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.register-error {
+  position: absolute;
+
+  bottom: -18px;
+  left: 20px;
+
+  font-size: 0.85rem;
+
+  color: black;
+
+  line-height: 1;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   =========================================================
+   REGISTER ONLY
+   Sve ispod ovoga je namenjeno isključivo Register stranici.
+   =========================================================
+   ========================================================= */
+
+/* =========================================================
+   REGISTER PAGE SECTION
+========================================================= */
+
+.register-page-section {
+  align-items: flex-start;
+
+  padding: 100px 20px 60px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+}
+
+/* =========================================================
+   WIDE REGISTER CARD
+========================================================= */
+
+.register-page-section .register-form-wide {
+  width: min(780px, calc(100% - 40px));
+
+  min-height: auto;
+
+  margin-top: 130px;
+
+  padding: 34px 48px 28px;
+
+  background-color: rgba(255, 255, 255, 0.19);
+
+  border-radius: 18px;
+
+  backdrop-filter: blur(9px);
+}
+
+/* =========================================================
+   REGISTER HEADING
+========================================================= */
+
+.register-page-section .register-heading {
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 28px;
+}
+
+.register-page-section .register-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: var(--font-sans);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+.register-page-section .register-title {
+  margin: 0 0 8px;
+
+  font-size: 1.45rem;
+
+  letter-spacing: 0.01em;
+}
+
+.register-page-section .register-subtitle {
+  max-width: 480px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: var(--font-sans);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TWO COLUMN GRID
+========================================================= */
+
+.register-page-section .register-form-grid-wide {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 24px;
+
+  row-gap: 0;
+
+  width: 100%;
+}
+
+/* =========================================================
+   REGISTER INPUT WRAPPER
+========================================================= */
+
+.register-page-section .register-input-wrapper {
+  margin-bottom: 28px;
+}
+
+/* =========================================================
+   REGISTER INPUT
+========================================================= */
+
+.register-page-section .register-form-control {
+  height: 42px;
+
+  margin-bottom: 0;
+
+  padding: 0 18px;
+
+  font-size: 0.86rem;
+}
+
+/* =========================================================
+   OPTIONAL LABEL
+========================================================= */
+
+.register-page-section .register-optional-field .register-optional-label {
+  position: absolute;
+
+  top: -15px;
+  right: 16px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   DATE INPUT
+========================================================= */
+
+.register-page-section .register-date-input {
+  color: white;
+
+  color-scheme: dark;
+}
+
+.register-page-section .register-date-input::-webkit-calendar-picker-indicator {
+  opacity: 0.75;
+
+  cursor: pointer;
+}
+
+.register-page-section .register-field-label {
+  position: absolute;
+
+  left: 18px;
+  top: -15px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.register-page-section .register-select {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  color: white;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 20px) 17px,
+    calc(100% - 15px) 17px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+.register-page-section .register-select option {
+  color: var(--color-charcoal);
+
+  background-color: white;
+}
+
+/* =========================================================
+   REGISTER ERRORS
+========================================================= */
+
+.register-page-section .register-error {
+  bottom: -17px;
+
+  left: 18px;
+
+  font-size: 0.7rem;
+}
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.register-page-section .register-button {
+  height: 42px;
+
+  max-width: none;
+
+  margin: 2px 0 14px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.1em;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.register-page-section .register-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================================================
+   REGISTER LOGIN LINK
+========================================================= */
+
+.register-page-section .register-login-link {
+  justify-content: center;
+
+  margin-bottom: 0;
+}
+
+.register-page-section .register-login-link::after {
+  display: none;
+}
+
+.register-page-section .register-login-link a {
+  font-size: 11px;
+
+  opacity: 0.9;
+}
+
+/* =========================================================
+   REGISTER SOCIAL SECTION
+========================================================= */
+
+.register-page-section .register-social-section {
+  display: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+  .register-page-section {
+    padding-top: 90px;
+  }
+
+  .register-page-section .register-form-wide {
+    width: min(720px, calc(100% - 30px));
+
+    margin-top: 95px;
+
+    padding: 32px 35px 26px;
+  }
+}
+
+@media (max-width: 650px) {
+  .register-page-section {
+    align-items: center;
+
+    padding: 90px 15px 40px;
+  }
+
+  .register-page-section .register-form-wide {
+    width: calc(100% - 10px);
+
+    margin-top: 70px;
+
+    padding: 30px 25px 25px;
+  }
+
+  .register-page-section .register-form-grid-wide {
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+  }
+
+  .register-page-section .register-input-wrapper {
+    margin-bottom: 28px;
+  }
+
+  .register-page-section .register-heading {
+    margin-bottom: 28px;
+  }
+
+  .register-page-section .register-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .register-page-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .register-page-section .register-form-wide {
+    width: 100%;
+
+    padding: 28px 20px 22px;
+  }
+
+  .register-page-section .register-title {
+    font-size: 1.2rem;
+  }
+
+  .register-page-section .register-subtitle {
+    font-size: 10px;
+  }
+}
