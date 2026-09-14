@@ -1,0 +1,68 @@
+.dining-page {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-ivory);
+}
+
+.dining-final {
+  padding: 130px 24px;
+  background-color: var(--color-ivory);
+  text-align: center;
+}
+
+.dining-final__content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.dining-final span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.dining-final h2 {
+  margin: 0 0 28px;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7vw, 84px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.dining-final p {
+  max-width: 480px;
+  margin: 0 auto 35px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-sage);
+}
+
+.dining-final button {
+  display: inline-flex;
+  width: auto;
+  max-width: none;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-charcoal);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-charcoal);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.dining-final button:hover {
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--color-sage);
+}
+
+@media (min-width: 768px) {
+  .dining-final {
+    padding: 180px 40px;
+  }
+}

@@ -1,0 +1,63 @@
+.the-philosophy-page {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-ivory);
+}
+
+.philosophy-final {
+  padding: 140px 24px;
+  background-color: var(--color-ivory);
+  text-align: center;
+}
+
+.philosophy-final span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.philosophy-final h2 {
+  margin: 0 0 30px;
+  font-family: var(--font-display);
+  font-size: clamp(54px, 8vw, 90px);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -2.5px;
+}
+
+.philosophy-final p {
+  max-width: 520px;
+  margin: 0 auto 35px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-sage);
+}
+
+.philosophy-final button {
+  display: inline-flex;
+  width: auto;
+  max-width: none;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-charcoal);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-charcoal);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.philosophy-final button:hover {
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--color-sage);
+}
+
+@media (min-width: 768px) {
+  .philosophy-final {
+    padding: 190px 40px;
+  }
+}

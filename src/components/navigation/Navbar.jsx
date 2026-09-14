@@ -200,11 +200,21 @@ const Navbar = ({ hasHero = false }) => {
 
             <li>
               <Link
+                to="/the-philosophy"
+                onClick={closeMenu}
+                className="side-link"
+              >
+                <span>06.</span> THE PHILOSOPHY
+              </Link>
+            </li>
+
+            <li>
+              <Link
                 to="/photo-gallery"
                 onClick={closeMenu}
                 className="side-link"
               >
-                <span>06.</span> PHOTO GALLERY
+                <span>07.</span> PHOTO GALLERY
               </Link>
             </li>
 
@@ -214,7 +224,7 @@ const Navbar = ({ hasHero = false }) => {
                 onClick={closeMenu}
                 className="side-link"
               >
-                <span>07.</span> BOOKING
+                <span>08.</span> BOOKING
               </Link>
             </li>
 

@@ -1,0 +1,70 @@
+.the-house-page {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+.house-final-section {
+  padding: 120px 24px;
+  background-color: var(--color-ivory);
+}
+
+.house-final-section__content {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.house-final-section__content span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.house-final-section h2 {
+  margin: 0 0 28px;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 80px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.house-final-section p {
+  max-width: 520px;
+  margin: 0 auto 35px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-sage);
+}
+
+.house-final-section button {
+  display: inline-flex;
+  width: auto;
+  max-width: none;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-charcoal);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-charcoal);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.house-final-section button:hover {
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--color-sage);
+}
+
+@media (min-width: 768px) {
+  .house-final-section {
+    padding: 180px 40px;
+  }
+}
