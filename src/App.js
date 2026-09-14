@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/navigation/Navbar";
 import Footer from "./components/navigation/Footer";
 import Home from "./pages/Home"
 import TheHousePage from "./pages/TheHousePage"
@@ -8,7 +7,6 @@ import TheGrounds from "./pages/TheGrounds"
 import Pool from "./pages/Pool"
 import Dining from "./pages/Dining"
 import ThePhilosophy from "./pages/ThePhilosophy"
-import Rooms from "./pages/Rooms"
 import AllRooms from "./pages/AllRooms"
 import Journal from "./pages/Journal"
 import Stories from "./pages/Stories"
@@ -29,6 +27,7 @@ import "./App.css";
 import RoomPage from "./components/RoomPage"; 
 import BookNow from "./components/BookNow";
 import PhotoGallery from "./pages/PhotoGallery";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -57,6 +56,7 @@ function App() {
         <Route path="/stay-summary" element={<StaySummary />} />
         <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/photo-gallery" element={<PhotoGallery />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
