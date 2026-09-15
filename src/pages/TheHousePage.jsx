@@ -7,6 +7,7 @@ import "./css/TheHousePage.css";
 import HouseNavigation from "../components/HouseNavigation";
 import FAQ from "../components/FAQ";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 
 const TheHousePage = () => {
   const navigate = useNavigate();
@@ -110,6 +111,7 @@ const TheHousePage = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
 
       <main className="the-house-page">
         <HeroSlider images={heroSlides} />

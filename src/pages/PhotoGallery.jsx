@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./css/PhotoGallery.css";
 import Navbar from "../components/navigation/Navbar";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 
 const galleryData = {
   "Living spaces": [
@@ -219,6 +220,7 @@ export default function PhotoGallery() {
   return (
     <>  
     <Navbar/>
+    <Breadcrumbs/>
      <section className="photo-gallery">
       {/* --------------------------------
           HEADER / CATEGORIES

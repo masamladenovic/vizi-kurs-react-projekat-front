@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navigation/Navbar";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 import "./css/Journal.css";
 
 const Journal = () => {
@@ -14,7 +15,7 @@ const Journal = () => {
         "There is a certain hour when the house is still quiet, the coffee is warm and there is nowhere else to be.",
       image: "/images/journal/Stories/morning-at-maison-eloi.jpg",
       alt: "Slow morning at Maison Éloi",
-      link: "/maison-eloi",
+      link: "/journal/maison-eloi",
     },
 
     {
@@ -24,7 +25,7 @@ const Journal = () => {
         "Quiet villages, winding roads and the landscapes that make the Luberon so easy to fall in love with.",
       image: "/images/journal/Provence/a-walk-through-lavender.jpg",
       alt: "Landscape of the Luberon in Provence",
-      link: "/provence",
+      link: "/journal/provence",
     },
 
     {
@@ -34,7 +35,7 @@ const Journal = () => {
         "Fresh ingredients, long lunches and the simple pleasure of gathering around a Provençal table.",
       image: "/images/journal/Food&Wine/provencal-table.jpg",
       alt: "Summer table in Provence",
-      link: "/food-and-wine",
+      link: "/journal/food-and-wine",
     },
 
     {
@@ -44,7 +45,7 @@ const Journal = () => {
         "From hilltop villages to quiet market mornings, a few of our favourite places beyond the house.",
       image: "/images/journal/Provence/village-cafe.jpg",
       alt: "Village in Provence",
-      link: "/provence",
+      link: "/journal/provence",
     },
 
     {
@@ -54,7 +55,7 @@ const Journal = () => {
         "Olive oil, warm bread, seasonal vegetables and the ingredients that shape everyday life in the South of France.",
       image: "/images/journal/Food&Wine/provencal-lunch.jpg",
       alt: "Provençal food and table",
-      link: "/food-and-wine",
+      link: "/journal/food-and-wine",
     },
 
     {
@@ -64,7 +65,7 @@ const Journal = () => {
         "A house shaped by time, natural materials and a belief in the beauty of things that do not need to be hurried.",
       image: "/images/journal/Maison-Eloi/exterior.jpg",
       alt: "Maison Éloi exterior",
-      link: "/maison-eloi",
+      link: "/journal/maison-eloi",
     },
 
     {
@@ -74,7 +75,7 @@ const Journal = () => {
         "Fresh bread, seasonal fruit and the gentle rhythm of a Saturday morning at the local market.",
       image: "/images/journal/Provence/provencal-market.jpg",
       alt: "Provençal market in the morning",
-      link: "/provence",
+      link: "/journal/provence",
     },
 
     {
@@ -84,7 +85,7 @@ const Journal = () => {
         "As the afternoon light softens, the table is set and the evening begins slowly among the vineyards.",
       image: "/images/journal/Food&Wine/wine.jpg",
       alt: "Wine at golden hour in Provence",
-      link: "/food-and-wine",
+      link: "/journal/food-and-wine",
     },
 
     {
@@ -94,13 +95,14 @@ const Journal = () => {
         "Open windows, afternoon shade and the small rituals that make a stay at Maison Éloi feel different.",
       image: "/images/journal/Stories/the-art-of-slowing-down.jpg",
       alt: "Slow living at Maison Éloi",
-      link: "/maison-eloi",
+      link: "/journal/maison-eloi",
     },
   ];
 
   return (
     <>
     <Navbar/>
+    <Breadcrumbs/>
        <main className="journal-page">
       {/* =========================
           INTRO

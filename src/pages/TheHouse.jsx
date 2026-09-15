@@ -6,6 +6,7 @@ import MarbleSection from "../components/MarbleSection";
 import ImageTextSection from "../components/ImageTextSection";
 import BookNow from "../components/BookNow";
 
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 import "./css/TheHouse.css";
 
 const TheHouse = () => {
@@ -98,6 +99,7 @@ const TheHouse = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
 
       <main className="the-house-page">
         {/* HERO */}

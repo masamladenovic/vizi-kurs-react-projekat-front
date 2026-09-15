@@ -3,6 +3,7 @@ import Navbar from "../components/navigation/Navbar";
 import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 import "./css/Contact.css";
 
 const contactHeroImages = [
@@ -44,6 +45,7 @@ const Contact = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
 
       {/* =========================
           HERO

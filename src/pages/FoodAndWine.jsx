@@ -2,6 +2,7 @@ import Navbar from "../components/navigation/Navbar";
 import JournalCategoryPage from "../components/JournalCategoryPage";
 import HeroSlider from "../components/HeroSlider";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 
 const FoodAndWine = () => {
   const stories = [
@@ -96,6 +97,7 @@ const FoodAndWine = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
 
       <HeroSlider images={foodHeroImages} />
 

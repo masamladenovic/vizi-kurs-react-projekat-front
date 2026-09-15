@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/navigation/Navbar";
 import "./css/Booking.css";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 
 const months = [
   "January",
@@ -200,6 +201,7 @@ const Booking = () => {
   return (
     <div className="booking-page">
       <Navbar />
+      <Breadcrumbs/>
 
       <main className="booking-main">
         {/* ========================================

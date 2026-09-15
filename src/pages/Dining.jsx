@@ -4,6 +4,7 @@ import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
 import ImageTextSection from "../components/ImageTextSection";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 import "./css/Dining.css";
 
 const Dining = () => {
@@ -88,6 +89,7 @@ const Dining = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
 
       <main className="dining-page">
         <HeroSlider images={heroSlides} />
@@ -109,7 +111,7 @@ const Dining = () => {
           }}
           secondaryButton={{
             label: "Explore Provence",
-            onClick: () => navigate("/provence"),
+            onClick: () => navigate("/journal/provence"),
           }}
         />
 

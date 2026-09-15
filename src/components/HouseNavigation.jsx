@@ -12,7 +12,7 @@ const HouseNavigation = ({stone}) => {
         "Stone, light and quiet spaces shaped around the rhythm of Provençal life.",
       image: "/images/house/the-house/exterior.jpg",
       alt: "Maison Éloi stone house surrounded by the Provençal landscape",
-      path: "/the-house",
+      path: "/the-house-page/the-house",
     },
     {
       number: "02",
@@ -21,7 +21,7 @@ const HouseNavigation = ({stone}) => {
         "Olive trees, gardens and open landscapes made for slow afternoons outdoors.",
       image: "/images/house/the-grounds/landscape.jpg",
       alt: "The grounds and Provençal landscape surrounding Maison Éloi",
-      path: "/the-grounds",
+      path: "/the-house-page/the-grounds",
     },
     {
       number: "03",
@@ -30,7 +30,7 @@ const HouseNavigation = ({stone}) => {
         "A quiet place to swim, rest and let the day unfold at its own pace.",
       image: "/images/house/the-pool/pool-detail-2.jpg",
       alt: "Pool at Maison Éloi surrounded by Provençal landscape",
-      path: "/pool",
+      path: "/the-house-page/pool",
     },
     {
       number: "04",
@@ -39,7 +39,7 @@ const HouseNavigation = ({stone}) => {
         "Long lunches, local flavours and evenings gathered around the table.",
       image: "/images/house/dining/dining.jpg",
       alt: "Dining table at Maison Éloi",
-      path: "/dining",
+      path: "/the-house-page/dining",
     },
   ];
 

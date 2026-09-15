@@ -4,6 +4,7 @@ import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
 import ImageTextSection from "../components/ImageTextSection";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 import "./css/Pool.css";
 
 const Pool = () => {
@@ -85,6 +86,7 @@ const Pool = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
 
       <main className="pool-page">
         <HeroSlider images={heroSlides} />

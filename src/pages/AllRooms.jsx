@@ -11,6 +11,7 @@ import "swiper/css/effect-fade";
 import "./css/AllRooms.css";
 import HouseNavigation from "../components/HouseNavigation";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 
 
 const AllRooms = () => {
@@ -126,6 +127,7 @@ const AllRooms = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs />
 
       <HeroSlider images={roomsHeroImages} />
 
@@ -152,7 +154,7 @@ const AllRooms = () => {
           }}
           secondaryButton={{
             label: "Explore Maison Éloi",
-            onClick: () => navigate("/the-house"),
+            onClick: () => navigate("/the-house-page"),
           }}
         />
 

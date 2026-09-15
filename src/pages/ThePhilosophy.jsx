@@ -5,6 +5,7 @@ import MarbleSection from "../components/MarbleSection";
 import ImageTextSection from "../components/ImageTextSection";
 import BookNow from "../components/BookNow";
 import "./css/ThePhilosophy.css";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 
 const ThePhilosophy = () => {
   const navigate = useNavigate();
@@ -131,6 +132,7 @@ const ThePhilosophy = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
 
       <main className="the-philosophy-page">
         <HeroSlider images={heroSlides} />
@@ -149,7 +151,7 @@ const ThePhilosophy = () => {
           }
           primaryButton={{
             label: "Discover the house",
-            onClick: () => navigate("/the-house"),
+            onClick: () => navigate("/the-house-page"),
           }}
           secondaryButton={{
             label: "Book your stay",

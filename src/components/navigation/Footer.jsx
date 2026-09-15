@@ -18,11 +18,11 @@ const Footer = () => {
           <div className="site-footer__column">
             <span className="site-footer__label">EXPLORE</span>
 
-            <Link to="/the-house">The House</Link>
-            <Link to="/the-grounds">The Grounds</Link>
-            <Link to="/pool">The Pool</Link>
-            <Link to="/dining">Dining</Link>
-            <Link to="/the-philosophy">Our Philosophy</Link>
+            <Link to="/the-house-page/the-house">The House</Link>
+            <Link to="/the-house-page/the-grounds">The Grounds</Link>
+            <Link to="/the-house-page/pool">The Pool</Link>
+            <Link to="/the-house-page/dining">Dining</Link>
+            <Link to="/the-house-page/the-philosophy">Our Philosophy</Link>
           </div>
 
           <div className="site-footer__column">
@@ -30,8 +30,8 @@ const Footer = () => {
 
             <Link to="/rooms">Rooms</Link>
             <Link to="/booking">Book your stay</Link>
-            <Link to="/maison-eloi">Maison Éloi</Link>
-            <Link to="/provence">Provence</Link>
+            <Link to="/journal/maison-eloi">Maison Éloi</Link>
+            <Link to="/journal/provence">Provence</Link>
           </div>
 
           {/* CONTACT */}

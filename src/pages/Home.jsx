@@ -101,7 +101,7 @@ const Home = () => {
       imageSrc: "../../images/house/the-pool/pool-detail-2.jpg",
       imageAlt:
         "Quiet swimming pool surrounded by stone and Mediterranean greenery",
-      button: { label: "THE ART OF DOING LESS", to: "/pool" },
+      button: { label: "THE ART OF DOING LESS", to: "/the-house-page/pool" },
     },
     {
       title: "DINNER UNDER THE PLANE TREES",
@@ -110,7 +110,7 @@ const Home = () => {
       imageSrc: "../../images/journal/Food&Wine/ratatouille.jpg",
       imageAlt:
         "Traditional Provençal ratatouille prepared with fresh seasonal vegetables",
-      button: { label: "DISCOVER DINING", to: "/dining" },
+      button: { label: "DISCOVER DINING", to: "/the-house-page/dining" },
     },
     {
       title: "NOTES FROM A SLOWER SIDE OF PROVENCE",

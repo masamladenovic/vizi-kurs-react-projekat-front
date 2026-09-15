@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import "./css/Login.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Navbar from "../components/navigation/Navbar";
+import Breadcrumbs from "../components/navigation/Breadcrumbs";
 
 const Login = () => {
   const initialLoginValues = {
@@ -27,6 +28,7 @@ const Login = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs/>
       <section className="login-section">
         <div className="register-form-div">
           <Formik

@@ -4,6 +4,7 @@ import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
 import ImageTextSection from "../components/ImageTextSection";
 import BookNow from "../components/BookNow";
+import Breadcrumbs from "../components/navigation/Breadcrumbs.jsx";
 import "./css/TheGrounds.css";
 
 const TheGrounds = () => {
@@ -72,6 +73,7 @@ const TheGrounds = () => {
   return (
     <>
       <Navbar hasHero />
+      <Breadcrumbs />
 
       <main className="the-grounds-page">
         <HeroSlider images={heroSlides} />
@@ -91,11 +93,11 @@ const TheGrounds = () => {
           }
           primaryButton={{
             label: "Discover Provence",
-            onClick: () => navigate("/provence"),
+            onClick: () => navigate("journal/provence"),
           }}
           secondaryButton={{
             label: "Explore the house",
-            onClick: () => navigate("/the-house"),
+            onClick: () => navigate("/the-house-page"),
           }}
         />
 
@@ -106,7 +108,7 @@ const TheGrounds = () => {
           <span>MAISON ÉLOI</span>
         </section>
       </main>
-      <BookNow/>
+      <BookNow />
     </>
   );
 };
