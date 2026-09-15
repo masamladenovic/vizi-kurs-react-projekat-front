@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./css/FAQ.css";
 
-const FAQ = ({ items = [] }) => {
+const FAQ = ({ items = [], linen }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleQuestion = (index) => {
@@ -9,7 +9,7 @@ const FAQ = ({ items = [] }) => {
   };
 
   return (
-    <section className="faq-section">
+    <section className={`faq-section ${linen ? "faq-section--linen" : ""}`}>
       <div className="faq-section__intro">
         <span className="faq-section__eyebrow">FREQUENTLY ASKED QUESTIONS</span>
 

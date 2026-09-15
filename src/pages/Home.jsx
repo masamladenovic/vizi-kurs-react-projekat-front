@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
 import Navbar from "../components/navigation/Navbar";
-
+import BookNow from "../components/BookNow";
 import "./css/Home.css";
 import ImageTextSection from "../components/ImageTextSection";
 import FAQ from "../components/FAQ";
+import HouseNavigation from "../components/HouseNavigation";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -82,7 +83,7 @@ const Home = () => {
         "An old Provençal stone house, thoughtfully restored with respect for its history and an appreciation for the simple beauty of modern Mediterranean living.",
       imageSrc: "../../images/house/the-house/exterior.jpg",
       imageAlt: "Maison Éloi stone house surrounded by the Provençal landscape",
-      button: { label: "DISCOVER THE HOUSE", to: "/the-house" },
+      button: { label: "DISCOVER THE HOUSE", to: "/the-house-page" },
     },
     {
       title: "ROOMS MADE FOR SLOW MORNINGS",
@@ -100,7 +101,7 @@ const Home = () => {
       imageSrc: "../../images/house/the-pool/pool-detail-2.jpg",
       imageAlt:
         "Quiet swimming pool surrounded by stone and Mediterranean greenery",
-      button: { label: "THE ART OF DOING LESS", to: "/art-of-doing-less" },
+      button: { label: "THE ART OF DOING LESS", to: "/pool" },
     },
     {
       title: "DINNER UNDER THE PLANE TREES",
@@ -153,9 +154,12 @@ const Home = () => {
 
         <ImageTextSection data={homeSectionsData} />
 
+        <HouseNavigation stone />
+
         <FAQ items={homeFaq} />
-        
       </main>
+
+      <BookNow />
     </>
   );
 };

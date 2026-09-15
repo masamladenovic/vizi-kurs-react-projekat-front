@@ -1,6 +1,7 @@
 import Navbar from "../components/navigation/Navbar";
 import JournalCategoryPage from "../components/JournalCategoryPage";
 import HeroSlider from "../components/HeroSlider";
+import BookNow from "../components/BookNow";
 
 const Provence = () => {
   const stories = [
@@ -111,6 +112,7 @@ const Provence = () => {
         intro="Villages, landscapes, markets and small discoveries from the Luberon and the countryside surrounding Maison Éloi."
         data={stories}
       />
+      <BookNow/>
     </>
   );
 };

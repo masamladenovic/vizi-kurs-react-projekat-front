@@ -1,6 +1,7 @@
 import Navbar from "../components/navigation/Navbar";
 import JournalCategoryPage from "../components/JournalCategoryPage";
 import HeroSlider from "../components/HeroSlider";
+import BookNow from "../components/BookNow";
 
 const FoodAndWine = () => {
   const stories = [
@@ -61,7 +62,7 @@ const FoodAndWine = () => {
     },
   ];
 
-    const foodHeroImages = [
+  const foodHeroImages = [
     {
       imageUrl: "/images/journal/Food&Wine/wine.jpg",
       alt: "Hero",
@@ -94,7 +95,7 @@ const FoodAndWine = () => {
 
   return (
     <>
-      <Navbar hasHero/>
+      <Navbar hasHero />
 
       <HeroSlider images={foodHeroImages} />
 
@@ -110,6 +111,8 @@ const FoodAndWine = () => {
         intro="Provençal ingredients, long lunches, local wines and the simple rituals that make food an essential part of life at Maison Éloi."
         data={stories}
       />
+
+      <BookNow />
     </>
   );
 };

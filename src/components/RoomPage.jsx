@@ -6,6 +6,7 @@ import RoomPhotoGallery from "../components/RoomPhotoGallery";
 import RoomDetails from "../components/RoomDetails";
 import RoomAtmosphere from "../components/RoomAtmosphere";
 import RoomAmenities from "../components/RoomAmenities";
+import BookNow from "../components/BookNow";
 
 import { rooms } from "../data/rooms";
 
@@ -38,7 +39,7 @@ const RoomPage = () => {
         }}
         secondaryButton={{
           label: "Explore all rooms",
-          onClick: () => navigate("/all-rooms"),
+          onClick: () => navigate("/rooms"),
         }}
       />
 
@@ -50,6 +51,7 @@ const RoomPage = () => {
         amenities={room.amenities}
         intro={room.amenitiesIntro}
       />
+      <BookNow />
     </>
   );
 };

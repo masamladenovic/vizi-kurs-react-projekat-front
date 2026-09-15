@@ -7,7 +7,7 @@ const BookNow = () => {
   return (
     <section className="book-now">
       <div className="book-your-stay-div">
-        <Link to="/book">BOOK YOUR STAY NOW</Link>
+        <Link to="/booking">BOOK YOUR STAY NOW</Link>
         <div className="arrow-circle">
           <RiArrowUpLongLine />
         </div>

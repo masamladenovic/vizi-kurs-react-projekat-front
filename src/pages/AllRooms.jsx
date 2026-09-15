@@ -3,16 +3,93 @@ import { rooms } from "../data/rooms";
 import MarbleSection from "../components/MarbleSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
-
+import Navbar from "../components/navigation/Navbar";
+import HeroSlider from "../components/HeroSlider";
+import FAQ from "../components/FAQ";
 import "swiper/css";
 import "swiper/css/effect-fade";
-
 import "./css/AllRooms.css";
-import Navbar from "../components/navigation/Navbar";
-import Footer from "../components/navigation/Footer";
+import HouseNavigation from "../components/HouseNavigation";
+import BookNow from "../components/BookNow";
+
 
 const AllRooms = () => {
   const navigate = useNavigate();
+
+   const roomsHeroImages = [
+    {
+      imageUrl: "/images/rooms/chambre-luberon/luberon-atmosphere.jpg",
+      alt: "Hero",
+    },
+    {
+      imageUrl: "/images/rooms/chambre-jardin/jardin-bedroom-detail.jpg",
+      alt: "Architectural detail",
+    },
+    {
+      imageUrl: "/images/rooms/la-suite-bastide/bastide-bathroom.jpg",
+      alt: "Architecture entrance",
+    },
+    {
+      imageUrl: "/images/rooms/chambre-luberon/luberon-hero.jpg",
+      alt: "Pool detail",
+    },
+    {
+      imageUrl: "/images/rooms/la-suite-bastide/bastide-bathroom.jpg",
+      alt: "Couple on the terrace",
+    },
+    {
+      imageUrl: "/images/rooms/la-suite-bastide/bastide-bed.jpg",
+      alt: "Evening",
+    },
+    {
+      imageUrl: "/images/rooms/la-suite-bastide/bastide-sitting-area.jpg",
+      alt: "Woman walking towards the house",
+    },
+  ];
+
+  const roomsFaq = [
+    {
+      question: "How do I choose the right room?",
+      answer:
+        "Each room at Maison Éloi has its own character, atmosphere and connection to the surrounding landscape. Explore the individual room pages to discover their views, details and amenities, then choose the space that feels right for your stay.",
+    },
+
+    {
+      question: "What rooms are available at Maison Éloi?",
+      answer:
+        "Maison Éloi offers a small collection of individually designed rooms, including La Suite Bastide, Chambre Oliviers, Chambre Jardin and Chambre Luberon. Each room has been designed to feel calm, private and connected to the Provençal setting.",
+    },
+
+    {
+      question: "Do all rooms have a view?",
+      answer:
+        "Each room has its own relationship with the landscape, from views across the Luberon to quieter garden and olive grove surroundings. The exact outlook depends on the room you choose.",
+    },
+
+    {
+      question: "Do the rooms have private bathrooms?",
+      answer:
+        "Yes. Each guest room is designed with its own private bathroom, combining natural materials and understated details with the comfort you would expect from a considered Provençal retreat.",
+    },
+
+    {
+      question: "Can I request a specific room?",
+      answer:
+        "Of course. You can select your preferred room when making your reservation, subject to availability. If you are unsure which room is best suited to your stay, contact us and we will be happy to help.",
+    },
+
+    {
+      question: "Can we book more than one room?",
+      answer:
+        "Yes. Multiple rooms can be reserved together depending on availability, making Maison Éloi suitable for families, friends or small groups travelling together.",
+    },
+
+    {
+      question: "Can I see more photos of each room before booking?",
+      answer:
+        "Yes. Each room has its own gallery with photographs of the bedroom, bathroom, details and surrounding views, allowing you to get a better sense of the atmosphere before choosing your stay.",
+    },
+  ];
 
   const roomsList = Object.entries(rooms);
 
@@ -48,7 +125,9 @@ const AllRooms = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar hasHero />
+
+      <HeroSlider images={roomsHeroImages} />
 
       <main className="all-rooms-page">
         {/* =====================================================
@@ -244,6 +323,12 @@ const AllRooms = () => {
             </div>
           </div>
         </section>
+
+        <HouseNavigation stone />
+
+        <FAQ items={roomsFaq} linen />
+
+        <BookNow/>
       </main>
     </>
   );

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./css/HouseNavigation.css";
 
-const HouseNavigation = () => {
+const HouseNavigation = ({stone}) => {
   const navigate = useNavigate();
 
   const sections = [
@@ -44,7 +44,7 @@ const HouseNavigation = () => {
   ];
 
   return (
-    <section className="house-navigation">
+    <section className={`house-navigation ${stone ? "house-navigation--stone" : ""}`}>
       <div className="house-navigation__header">
         <span className="house-navigation__eyebrow">EXPLORE THE HOUSE</span>
 

@@ -35,7 +35,7 @@ const RoomDetail = () => {
         }}
         secondaryButton={{
           label: "Explore all rooms",
-          onClick: () => navigate("/all-rooms"),
+          onClick: () => navigate("/rooms"),
         }}
       />
 

@@ -3,6 +3,7 @@ import Navbar from "../components/navigation/Navbar";
 import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
 import ImageTextSection from "../components/ImageTextSection";
+import BookNow from "../components/BookNow";
 import "./css/TheGrounds.css";
 
 const TheGrounds = () => {
@@ -105,6 +106,7 @@ const TheGrounds = () => {
           <span>MAISON ÉLOI</span>
         </section>
       </main>
+      <BookNow/>
     </>
   );
 };

@@ -16,10 +16,8 @@
 
   background-color: transparent;
 
-  transition:
-    background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
-
 
 /* =========================================
    NAVBAR INNER
@@ -42,7 +40,6 @@
   padding: 18px 25px;
 }
 
-
 /* =========================================
    TRANSPARENT NAVBAR
 ========================================= */
@@ -51,23 +48,17 @@
   background-color: transparent;
 }
 
-
 /* =========================================
    SOLID NAVBAR
 ========================================= */
 
 .main-menu-scrolled {
   background-color: var(--color-stone);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid var(--color-sage);
 
-  animation:
-    navbarSlideDown
-    0.8s
-    cubic-bezier(0.76, 0, 0.24, 1)
-    forwards;
+  animation: navbarSlideDown 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
 }
-
 
 /* =========================================
    SOLID NAVBAR ENTER
@@ -83,7 +74,6 @@
   }
 }
 
-
 /* =========================================
    NAV ITEMS
 ========================================= */
@@ -95,7 +85,6 @@
 
   letter-spacing: 1.2px;
 }
-
 
 /* =========================================
    TRANSPARENT NAVBAR
@@ -122,7 +111,6 @@
   border-color: var(--color-white);
 }
 
-
 /* =========================================
    SCROLLED NAVBAR
    CHARCOAL
@@ -148,7 +136,6 @@
   border-color: var(--color-charcoal);
 }
 
-
 /* =========================================
    NAV LINKS
 ========================================= */
@@ -164,10 +151,8 @@
 
   text-decoration: none;
 
-  transition:
-    font-weight 0.4s ease;
+  transition: font-weight 0.4s ease;
 }
-
 
 /* =========================================
    MENU BUTTON
@@ -199,7 +184,7 @@
   font-weight: 500;
 }
 
-.open-menu-button:hover{
+.open-menu-button:hover {
   color: unset;
 
   border-color: unset;
@@ -209,9 +194,7 @@
   box-shadow: unset;
 
   transform: unset;
-
 }
-
 
 /* =========================================
    CIRCLES
@@ -237,16 +220,13 @@
     background-color 0.4s ease;
 }
 
-
 .nav-icon {
   font-size: 20px;
 
   color: inherit;
 
-  transition:
-    color 0.4s ease;
+  transition: color 0.4s ease;
 }
-
 
 /* =========================================
    RIGHT SIDE
@@ -264,12 +244,10 @@
   padding: 0;
 }
 
-
 .right-side li {
   margin: 0;
   padding: 0;
 }
-
 
 /* =========================================
    BIG LOGO
@@ -282,8 +260,7 @@
 
   top: 150%;
 
-  transform:
-    translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
   display: flex;
 
@@ -299,10 +276,8 @@
 
   transition:
     opacity 0.7s ease,
-    transform 0.8s
-    cubic-bezier(0.76, 0, 0.24, 1);
+    transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 
 .big-logo img {
   display: block;
@@ -315,14 +290,8 @@
 
   opacity: 0;
 
-  animation:
-    bigLogoEnter
-    1.4s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    0.2s
-    forwards;
+  animation: bigLogoEnter 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
 }
-
 
 /* =========================================
    BIG LOGO INITIAL ENTER
@@ -332,18 +301,15 @@
   from {
     opacity: 0;
 
-    transform:
-      translateY(-70px);
+    transform: translateY(-70px);
   }
 
   to {
     opacity: 1;
 
-    transform:
-      translateY(0);
+    transform: translateY(0);
   }
 }
-
 
 /* =========================================
    BIG LOGO - SCROLLED
@@ -352,26 +318,20 @@
 .main-menu-scrolled .big-logo {
   opacity: 0;
 
-  transform:
-    translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
   pointer-events: none;
 
-  transition:
-    opacity 0.65s ease;
+  transition: opacity 0.65s ease;
 }
 
-
 .main-menu-scrolled .big-logo img {
-  transform:
-    translateY(-35px);
+  transform: translateY(-35px);
 
   transition:
     opacity 0.65s ease,
-    transform 0.8s
-    cubic-bezier(0.76, 0, 0.24, 1);
+    transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 
 /* =========================================
    SMALL LOGO
@@ -383,8 +343,7 @@
   left: 50%;
   top: 50%;
 
-  transform:
-    translate(-50%, -80px);
+  transform: translate(-50%, -80px);
 
   display: flex;
 
@@ -402,10 +361,8 @@
 
   transition:
     opacity 0.5s ease,
-    transform 0.7s
-    cubic-bezier(0.76, 0, 0.24, 1);
+    transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 
 .small-logo img {
   display: block;
@@ -415,23 +372,18 @@
   height: auto;
 }
 
-
 /* =========================================
    SMALL LOGO - SCROLLED
 ========================================= */
 
 .main-menu-scrolled .small-logo {
   opacity: 1;
-
-  transform:
-    translate(-50%, -50%);
-
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
   transition:
     opacity 0.7s ease 0.15s,
-    transform 0.7s
-    cubic-bezier(0.76, 0, 0.24, 1);
+    transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 
 /* =========================================
    SMALL LOGO - TRANSPARENT
@@ -440,15 +392,12 @@
 .main-menu-transparent .small-logo {
   opacity: 0;
 
-  transform:
-    translate(-50%, -80px);
+  transform: translate(-50%, -80px);
 
   transition:
     opacity 0.45s ease,
-    transform 0.6s
-    cubic-bezier(0.76, 0, 0.24, 1);
+    transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 
 /* =========================================
    BIG LOGO - TRANSPARENT
@@ -457,25 +406,18 @@
 .main-menu-transparent .big-logo {
   opacity: 1;
 
-  transform:
-    translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
   pointer-events: auto;
 
-  transition:
-    opacity 0.7s ease 0.15s;
+  transition: opacity 0.7s ease 0.15s;
 }
-
 
 .main-menu-transparent .big-logo img {
-  transform:
-    translateY(0);
+  transform: translateY(0);
 
-  transition:
-    transform 0.8s
-    cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 
 /* =========================================
    HOVER
@@ -490,18 +432,15 @@
   font-weight: bold;
 }
 
-
 .main-menu-transparent .nav-link:hover .icon-wrapper {
   border-color: var(--color-sage);
 
   background-color: var(--color-ivory);
 }
 
-
 .main-menu-transparent .nav-link:hover .nav-icon {
   color: var(--color-sage);
 }
-
 
 /* =========================================
    SIDE MENU
@@ -521,8 +460,7 @@
 
   height: 100vh;
 
-  background-image:
-    url("../../../public/images/branding/mermer-pozadina.png");
+  background-image: url("../../../public/images/branding/mermer-pozadina.png");
 
   background-size: cover;
 
@@ -532,26 +470,20 @@
 
   padding: 25px;
 
-  transform:
-    translateX(-100%);
+  transform: translateX(-100%);
 
-  transition:
-    transform 0.6s
-    cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 
   overflow-y: auto;
 }
-
 
 /* =========================================
    SIDE MENU OPEN
 ========================================= */
 
 .side-menu-open {
-  transform:
-    translateX(0);
+  transform: translateX(0);
 }
-
 
 /* =========================================
    CLOSE
@@ -583,7 +515,6 @@
   letter-spacing: 1.2px;
 }
 
-
 /* =========================================
    CLOSE CIRCLE
 ========================================= */
@@ -608,13 +539,11 @@
     background-color 0.4s ease;
 }
 
-
 .close-icon {
   font-size: 18px;
 
   color: var(--color-charcoal);
 }
-
 
 /* =========================================
    CLOSE HOVER
@@ -622,7 +551,7 @@
 
 .close-side-menu:hover {
   color: var(--color-sage);
-   border-color: unset;
+  border-color: unset;
 
   background-color: unset;
 
@@ -631,16 +560,13 @@
   transform: unset;
 }
 
-
 .close-side-menu:hover .close-icon-wrapper {
   border-color: var(--color-sage);
 }
 
-
 .close-side-menu:hover .close-icon {
   color: var(--color-sage);
 }
-
 
 /* =========================================
    SIDE NAV
@@ -649,7 +575,6 @@
 .side-menu-nav {
   margin-top: 45px;
 }
-
 
 /* =========================================
    SIDE NAV LIST
@@ -667,7 +592,6 @@
   padding: 0;
 }
 
-
 /* =========================================
    SIDE NAV ITEMS
 ========================================= */
@@ -677,7 +601,6 @@
 
   padding: 0;
 }
-
 
 /* =========================================
    SIDE LINKS
@@ -703,7 +626,6 @@
     transform 0.3s ease;
 }
 
-
 /* =========================================
    NUMBERS
 ========================================= */
@@ -716,7 +638,6 @@
   font-weight: 500;
 }
 
-
 /* =========================================
    SIDE LINK HOVER
 ========================================= */
@@ -724,10 +645,8 @@
 .side-link:hover {
   color: var(--color-sage);
 
-  transform:
-    translateX(7px);
+  transform: translateX(7px);
 }
-
 
 /* =========================================
    QUICK LINKS
@@ -746,7 +665,6 @@
 
   max-width: 460px;
 }
-
 
 .quick-link {
   display: inline-flex;
@@ -767,10 +685,8 @@
 
   text-transform: uppercase;
 
-  transition:
-    color 0.3s ease;
+  transition: color 0.3s ease;
 }
-
 
 .quick-link svg {
   font-size: 9px;
@@ -778,11 +694,9 @@
   color: var(--color-sage);
 }
 
-
 .quick-link:hover {
   color: var(--color-sage);
 }
-
 
 /* =========================================
    OVERLAY
@@ -793,17 +707,12 @@
 
   inset: 0;
 
-  background:
-    rgba(36, 37, 34, 0.45);
+  background: rgba(36, 37, 34, 0.45);
 
   z-index: 1150;
 
-  animation:
-    overlayFade
-    0.4s
-    ease;
+  animation: overlayFade 0.4s ease;
 }
-
 
 @keyframes overlayFade {
   from {
@@ -829,46 +738,36 @@
 ========================================= */
 
 @media (min-width: 701px) {
-
   .main-menu {
     height: 90px;
   }
 
-
   .main-menu > nav > ul {
     height: 90px;
 
-    padding:
-      20px
-      40px;
+    padding: 20px 40px;
   }
-
 
   .main-menu li {
     font-size: 17px;
   }
 
-
   .open-menu-button {
     font-size: 17px;
   }
-
 
   .icon-wrapper {
     width: 50px;
     height: 50px;
   }
 
-
   .nav-icon {
     font-size: 22px;
   }
 
-
   .right-side {
     gap: 24px;
   }
-
 
   .big-logo img {
     width: 560px;
@@ -876,11 +775,9 @@
     max-width: 50vw;
   }
 
-
   .small-logo img {
     width: 250px;
   }
-
 
   .side-menu {
     width: 60vw;
@@ -890,78 +787,62 @@
     padding: 35px 45px;
   }
 
-
   .side-menu-nav {
     margin-top: 50px;
   }
 
-
   .side-link {
     font-size: 24px;
   }
-
 
   .quick-links {
     margin-top: 45px;
   }
 }
 
-
 /* =========================================
    DESKTOP
 ========================================= */
 
 @media (min-width: 1024px) {
-
   .main-menu {
     height: 100px;
   }
 
-
   .main-menu > nav > ul {
     height: 100px;
 
-    padding:
-      22px
-      64px;
+    padding: 22px 64px;
   }
-
 
   .main-menu li {
     font-size: 18px;
   }
 
-
   .open-menu-button {
     font-size: 18px;
   }
-
 
   .icon-wrapper {
     width: 55px;
     height: 55px;
   }
 
-
   .nav-icon {
     font-size: 24px;
   }
-
 
   .nav-link {
     gap: 10px;
   }
 
-
   .open-menu-button {
     gap: 10px;
   }
 
-
   .right-side {
     gap: 32px;
   }
-
 
   .big-logo img {
     width: 680px;
@@ -969,11 +850,9 @@
     max-width: 45vw;
   }
 
-
   .small-logo img {
     width: 300px;
   }
-
 
   .side-menu {
     width: 50vw;
@@ -982,26 +861,16 @@
 
     max-width: 720px;
 
-    padding:
-      38px
-      64px;
+    padding: 38px 64px;
   }
-
 
   .side-menu-nav {
     margin-top: 55px;
   }
 
-
   .side-link {
-    font-size:
-      clamp(
-        26px,
-        1.4vw,
-        38px
-      );
+    font-size: clamp(26px, 1.4vw, 38px);
   }
-
 
   .quick-links {
     margin-top: 50px;
@@ -1013,10 +882,19 @@
    SHOW NAV TEXT - DESKTOP
 ========================================= */
 
-.open-menu-button p,
-.right-side .nav-link p {
+  .open-menu-button p,
+  .right-side .nav-link p {
+    display: block;
+  }
+}
+
+.big-logo a,
+.small-logo a {
+  display: block;
+  text-decoration: none;
+}
+
+.big-logo img,
+.small-logo img {
   display: block;
 }
-}
-
-

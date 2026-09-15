@@ -6,6 +6,7 @@ import ImageTextSection from "../components/ImageTextSection";
 import "./css/TheHousePage.css";
 import HouseNavigation from "../components/HouseNavigation";
 import FAQ from "../components/FAQ";
+import BookNow from "../components/BookNow";
 
 const TheHousePage = () => {
   const navigate = useNavigate();
@@ -158,6 +159,7 @@ const TheHousePage = () => {
 
         <FAQ items={houseFaq} />
       </main>
+      <BookNow/>
     </>
   );
 };

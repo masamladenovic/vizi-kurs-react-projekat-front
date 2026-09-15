@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navigation/Navbar";
+import BookNow from "../components/BookNow";
 import "./css/Journal.css";
 
 const Journal = () => {
@@ -167,6 +168,7 @@ const Journal = () => {
         </div>
       </section>
     </main>
+    <BookNow/>
     </>
    
   );

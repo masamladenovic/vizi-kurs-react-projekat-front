@@ -1,0 +1,280 @@
+/* =========================
+   NOT FOUND
+========================= */
+
+.not-found {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 24px 80px;
+
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+
+  overflow: hidden;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.not-found__content {
+  width: 100%;
+  max-width: 800px;
+
+  text-align: center;
+
+  animation: notFoundReveal 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.not-found__eyebrow {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: var(--color-sage);
+}
+
+/* =========================
+   404
+========================= */
+
+.not-found__number {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: var(--font-display);
+  font-size: clamp(100px, 25vw, 260px);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -8px;
+
+  color: var(--color-stone);
+
+  user-select: none;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.not-found h1 {
+  margin: 35px 0 25px;
+
+  font-family: var(--font-display);
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -1.5px;
+
+  color: var(--color-charcoal);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.not-found p {
+  max-width: 500px;
+
+  margin: 0 auto 38px;
+
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
+
+  color: rgba(36, 37, 34, 0.62);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.not-found__button {
+  width: auto;
+  max-width: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 13px 24px;
+
+  border: 1px solid var(--color-charcoal);
+  border-radius: 2px;
+
+  background-color: transparent;
+  color: var(--color-charcoal);
+
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow: none;
+  backdrop-filter: none;
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    gap 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.not-found__button:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-ivory);
+
+  border-color: var(--color-charcoal);
+
+  box-shadow: none;
+
+  transform: translateY(-2px);
+
+  gap: 24px;
+}
+
+.not-found__button span {
+  font-size: 15px;
+  line-height: 1;
+
+  transition: transform 0.4s ease;
+}
+
+.not-found__button:hover span {
+  transform: translateX(3px);
+}
+
+/* =========================
+   FOOTER DETAILS
+========================= */
+
+.not-found__footer {
+  position: absolute;
+
+  left: 24px;
+  right: 24px;
+  bottom: 28px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: rgba(36, 37, 34, 0.45);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes notFoundReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) {
+  .not-found {
+    padding: 140px 40px 90px;
+  }
+
+  .not-found__eyebrow {
+    margin-bottom: 35px;
+  }
+
+  .not-found h1 {
+    margin-top: 45px;
+    margin-bottom: 28px;
+  }
+
+  .not-found p {
+    font-size: 14px;
+  }
+
+  .not-found__footer {
+    left: 40px;
+    right: 40px;
+    bottom: 35px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .not-found {
+    padding: 110px 20px 90px;
+  }
+
+  .not-found__number {
+    font-size: 130px;
+    letter-spacing: -5px;
+  }
+
+  .not-found h1 {
+    margin-top: 35px;
+  }
+
+  .not-found p {
+    font-size: 12px;
+  }
+
+  .not-found p br {
+    display: none;
+  }
+
+  .not-found__footer {
+    left: 20px;
+    right: 20px;
+
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found__content,
+  .not-found__button,
+  .not-found__button span {
+    animation: none;
+    transition: none;
+  }
+}

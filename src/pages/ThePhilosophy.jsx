@@ -3,6 +3,7 @@ import Navbar from "../components/navigation/Navbar";
 import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
 import ImageTextSection from "../components/ImageTextSection";
+import BookNow from "../components/BookNow";
 import "./css/ThePhilosophy.css";
 
 const ThePhilosophy = () => {
@@ -175,6 +176,7 @@ const ThePhilosophy = () => {
           <button onClick={() => navigate("/booking")}>BOOK YOUR STAY →</button>
         </section>
       </main>
+      <BookNow/>
     </>
   );
 };

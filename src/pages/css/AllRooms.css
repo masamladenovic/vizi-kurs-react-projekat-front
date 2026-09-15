@@ -5,7 +5,7 @@
 .all-rooms-page {
   width: 100%;
   overflow: hidden;
-  margin-top: 100px;
+  margin-top: 0px;
 
   background-color: var(--color-ivory);
   color: var(--color-charcoal);

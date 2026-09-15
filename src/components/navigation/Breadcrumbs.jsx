@@ -15,7 +15,7 @@ const routes = [
 
   // Rooms
   { path: "/rooms", breadcrumb: "Rooms" },
-  { path: "/all-rooms", breadcrumb: "All Rooms" },
+  { path: "/rooms", breadcrumb: "All Rooms" },
   { path: "/la-suite-bastide", breadcrumb: "La Suite Bastide" },
   { path: "/chambre-oliviers", breadcrumb: "Chambre Oliviers" },
   { path: "/chambre-jardin", breadcrumb: "Chambre Jardin" },

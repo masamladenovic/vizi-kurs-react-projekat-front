@@ -1,6 +1,7 @@
 import Navbar from "../components/navigation/Navbar";
 import JournalCategoryPage from "../components/JournalCategoryPage";
 import HeroSlider from "../components/HeroSlider";
+import BookNow from "../components/BookNow";
 
 const Stories = () => {
   const stories = [
@@ -111,6 +112,7 @@ const Stories = () => {
         intro="Stories, rituals and quiet moments from the house — the little things that make a stay at Maison Éloi feel different."
         data={stories}
       />
+      <BookNow/>
     </>
   );
 };

@@ -14,10 +14,6 @@ import Provence from "./pages/Provence"
 import FoodAndWine from "./pages/FoodAndWine"
 import MaisonEloi from "./pages/MaisonEloi"
 import Booking from "./pages/Booking"
-import Dates from "./pages/Dates"
-import Guests from "./pages/Guests"
-import Confirmation from "./pages/Confirmation"
-import StaySummary from "./pages/StaySummary"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import NotFound from "./pages/NotFound"
@@ -25,13 +21,14 @@ import "./App.css";
 
 // Umesto direktnog uvoza komponente RoomDetails, uvozimo stranicu RoomPage koja upravlja podacima sobe:
 import RoomPage from "./components/RoomPage"; 
-import BookNow from "./components/BookNow";
 import PhotoGallery from "./pages/PhotoGallery";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/the-house-page" element={<TheHousePage />} />
@@ -51,17 +48,12 @@ function App() {
         <Route path="/food-and-wine" element={<FoodAndWine />} />
         <Route path="/maison-eloi" element={<MaisonEloi />} />
         <Route path="/booking" element={<Booking />} />
-        <Route path="/dates" element={<Dates/>} />
-        <Route path="/guests" element={<Guests />} />
-        <Route path="/stay-summary" element={<StaySummary />} />
-        <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/photo-gallery" element={<PhotoGallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <BookNow/>
       <Footer/>
     </BrowserRouter>
   );

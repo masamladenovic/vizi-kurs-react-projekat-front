@@ -1,6 +1,7 @@
 import Navbar from "../components/navigation/Navbar";
 import JournalCategoryPage from "../components/JournalCategoryPage";
 import HeroSlider from "../components/HeroSlider";
+import BookNow from "../components/BookNow";
 
 const MaisonEloi = () => {
   const stories = [
@@ -110,6 +111,7 @@ const MaisonEloi = () => {
         intro="A closer look at the architecture, details and philosophy behind Maison Éloi — a house shaped by Provence and designed for slower days."
         data={stories}
       />
+      <BookNow/>
     </>
   );
 };

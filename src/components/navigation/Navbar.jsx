@@ -39,9 +39,7 @@ const Navbar = ({ hasHero = false }) => {
     <>
       <header
         className={`main-menu ${
-          scrolled
-            ? "main-menu-scrolled"
-            : "main-menu-transparent"
+          scrolled ? "main-menu-scrolled" : "main-menu-transparent"
         }`}
       >
         <nav>
@@ -59,19 +57,19 @@ const Navbar = ({ hasHero = false }) => {
               </button>
             </li>
 
-
             {/* =====================================
                 BIG LOGO
                 TRANSPARENT NAVBAR
             ===================================== */}
 
             <li className="big-logo">
-              <img
-                src="/images/branding/transparent-logo.png"
-                alt="La Bastide Bourrelly"
-              />
+              <Link to="/">
+                <img
+                  src="/images/branding/transparent-logo.png"
+                  alt="Maison Éloi"
+                />
+              </Link>
             </li>
-
 
             {/* =====================================
                 SMALL LOGO
@@ -79,19 +77,17 @@ const Navbar = ({ hasHero = false }) => {
             ===================================== */}
 
             <li className="small-logo">
-              <img
-                src="/images/branding/logo-stone.jpg"
-                alt="La Bastide Bourrelly"
-              />
+              <Link to="/">
+                <img
+                  src="/images/branding/logo-stone.jpg"
+                  alt="Maison Éloi"
+                />
+              </Link>
             </li>
 
             <div className="right-side">
-
               <li>
-                <Link
-                  to="/booking"
-                  className="nav-link"
-                >
+                <Link to="/booking" className="nav-link">
                   <div className="icon-wrapper">
                     <IoCalendarOutline className="nav-icon" />
                   </div>
@@ -101,10 +97,7 @@ const Navbar = ({ hasHero = false }) => {
               </li>
 
               <li>
-                <Link
-                  to="/login"
-                  className="nav-link"
-                >
+                <Link to="/login" className="nav-link">
                   <div className="icon-wrapper">
                     <CgProfile className="nav-icon" />
                   </div>
@@ -112,48 +105,28 @@ const Navbar = ({ hasHero = false }) => {
                   <p>Login</p>
                 </Link>
               </li>
-
             </div>
-
           </ul>
         </nav>
       </header>
-
 
       {/* =========================================
           SIDE MENU
       ========================================= */}
 
-      <aside
-        className={`side-menu ${
-          menuOpen ? "side-menu-open" : ""
-        }`}
-      >
-
-        <button
-          className="close-side-menu"
-          onClick={closeMenu}
-        >
+      <aside className={`side-menu ${menuOpen ? "side-menu-open" : ""}`}>
+        <button className="close-side-menu" onClick={closeMenu}>
           <span className="close-icon-wrapper">
             <TfiClose className="close-icon" />
           </span>
 
-          <span className="close-text">
-            Close
-          </span>
+          <span className="close-text">Close</span>
         </button>
 
-
         <nav className="side-menu-nav">
-
           <ul>
-
             <li>
-              <Link
-                to="/"
-                onClick={closeMenu}
-                className="side-link"
-              >
+              <Link to="/" onClick={closeMenu} className="side-link">
                 <span>01.</span> WELCOME
               </Link>
             </li>
@@ -169,11 +142,7 @@ const Navbar = ({ hasHero = false }) => {
             </li>
 
             <li>
-              <Link
-                to="/rooms"
-                onClick={closeMenu}
-                className="side-link"
-              >
+              <Link to="/rooms" onClick={closeMenu} className="side-link">
                 <span>03.</span> ROOMS
               </Link>
             </li>
@@ -189,11 +158,7 @@ const Navbar = ({ hasHero = false }) => {
             </li>
 
             <li>
-              <Link
-                to="/journal"
-                onClick={closeMenu}
-                className="side-link"
-              >
+              <Link to="/journal" onClick={closeMenu} className="side-link">
                 <span>05.</span> JOURNAL
               </Link>
             </li>
@@ -219,64 +184,37 @@ const Navbar = ({ hasHero = false }) => {
             </li>
 
             <li>
-              <Link
-                to="/booking"
-                onClick={closeMenu}
-                className="side-link"
-              >
+              <Link to="/booking" onClick={closeMenu} className="side-link">
                 <span>08.</span> BOOKING
               </Link>
             </li>
-
           </ul>
-
 
           {/* QUICK LINKS */}
 
           <div className="quick-links">
-
-            <Link
-              to="/contact"
-              onClick={closeMenu}
-              className="quick-link"
-            >
+            <Link to="/contact" onClick={closeMenu} className="quick-link">
               Contact
               <GoDotFill />
             </Link>
 
-            <Link
-              to="/login"
-              onClick={closeMenu}
-              className="quick-link"
-            >
+            <Link to="/login" onClick={closeMenu} className="quick-link">
               Login
               <GoDotFill />
             </Link>
 
-            <Link
-              to="/register"
-              onClick={closeMenu}
-              className="quick-link"
-            >
+            <Link to="/register" onClick={closeMenu} className="quick-link">
               Register
             </Link>
-
           </div>
-
         </nav>
       </aside>
-
 
       {/* =========================================
           OVERLAY
       ========================================= */}
 
-      {menuOpen && (
-        <div
-          className="menu-overlay"
-          onClick={closeMenu}
-        />
-      )}
+      {menuOpen && <div className="menu-overlay" onClick={closeMenu} />}
     </>
   );
 };

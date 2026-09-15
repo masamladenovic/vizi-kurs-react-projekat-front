@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navigation/Navbar";
 import HeroSlider from "../components/HeroSlider";
 import MarbleSection from "../components/MarbleSection";
+import BookNow from "../components/BookNow";
 import "./css/Contact.css";
 
 const contactHeroImages = [
@@ -311,6 +312,8 @@ const Contact = () => {
           </button>
         </div>
       </section>
+
+      <BookNow/>
     </>
   );
 };
